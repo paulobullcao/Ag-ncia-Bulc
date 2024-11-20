@@ -128,25 +128,18 @@ body::before {
 }
 
 
-/* stylos botões */
 
-.cta-button2{
-    margin-top: 10;
-    background: var(--colorPurple);
-    color: var(--colorWhite);
-    padding: 10px 15px;
+/* stylos CTA */
+
+.cta2 {
     text-decoration: none;
-    border-radius: 10px;
-    size: 8;
-    
-}
-.cta-button2:hover{
-    background: var(--colorWhite);
-    color: var(--colorBlack);
-    
+    color: inherit; /* Mantém a cor do texto alinhada ao estilo da página */
+    color:var(--colorPurple)
 }
 
-
+.cta2:hover {
+    color: var(--colorWhite);
+}
 
 .cta{
     text-decoration: none;
@@ -236,7 +229,7 @@ footer {
     background-color: var(--colorBlack);
     color: var(--colorWhite); /* Texto branco para melhor contraste */
     padding: 20px; /* Espaçamento interno */
-    margin: 10 auto; /* Espaçamento externo */
+    margin: 20px 0; /* Espaçamento externo */
     border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
 
@@ -382,6 +375,14 @@ button {
     justify-content: right;
     gap: 10px;
     margin-top: 20px;
+}
+
+.whats img {
+    transition: transform 0.5s ease;
+}
+
+.whats img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho das imagens ao passar o mouse */
 }
 
 .whats img {
