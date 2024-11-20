@@ -236,7 +236,7 @@ footer {
     background-color: var(--colorBlack);
     color: var(--colorWhite); /* Texto branco para melhor contraste */
     padding: 20px; /* Espaçamento interno */
-    margin: 20px 0; /* Espaçamento externo */
+    margin: 20px auto; /* Espaçamento externo */
     border-radius: 8px; /* Bordas arredondadas (opcional) */
 }
 
