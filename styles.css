@@ -1,0 +1,393 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins&display=swap');
+
+:root{
+    --colorGray:rgb(87,87,87);
+    --colorPurple:#f58723;
+    --colorBlack:#000;
+    --colorWhite:#fff;
+
+}
+.hero h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight:400;
+    font-style:normal;
+
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: var(--colorBlack);
+    color: var(--colorWhite);
+    padding: 50px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    background-color: var(--colorBlack);
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    font-family: "Kanit", sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    font-style: normal;
+    font-size: 20px;
+    color: var(--colorWhite);
+    text-decoration: none;
+    padding: 5px;
+}
+
+nav ul li a:hover{
+    color: var(--colorPurple);
+    text-decoration: none;
+}
+
+.container-pisc {
+  font-family: "Kanit", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 50px;
+  color: var(--colorGray);
+    
+}
+
+.container-pisc span{
+    animation: brilho 2s ease-in-out infinite;
+}
+.container-pisc span:nth-of-type(2){
+    animation-delay: 0.25s;
+}
+.container-pisc span:nth-of-type(3){
+    animation-delay: 0.50s;
+}
+.container-pisc span:nth-of-type(4){
+    animation-delay: 0.75s;
+}
+.container-pisc span:nth-of-type(5){
+    animation-delay: 1s;
+}
+
+@keyframes brilho {
+    0%{
+        color:var(--colorWhite);
+        text-shadow:  0 0 12px var(--colorPurple), 
+        0 0 50px var(--colorPurple), 
+        0 0 100px var(--colorPurple);
+
+    }
+    10%, 90%{
+        color: var(--colorGray);
+        text-shadow: none;
+        
+    }
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px; 
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ajuste a largura conforme necessário */
+    height: 100%;
+    background-image: url('img/principal.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position:left;
+    z-index: -1; /* Garante que a imagem esteja atrás do conteúdo */
+    opacity: 0.7; /* Opcional: Ajusta a opacidade da imagem de fundo */
+}
+
+
+/* stylos botões */
+
+.cta-button2{
+    margin-top: 10;
+    background: var(--colorPurple);
+    color: var(--colorWhite);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    size: 8;
+    
+}
+.cta-button2:hover{
+    background: var(--colorWhite);
+    color: var(--colorBlack);
+    
+}
+
+
+
+.cta{
+    text-decoration: none;
+    color: var(--colorPurple);
+}
+
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: var(--colorWhite);
+}
+
+.section-especiais .container-especial{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+    color: var(--colorWhite);
+
+}
+.section-especiais .container-especial h2{
+    text-align: center;
+    color: var(--colorWhite);
+}
+
+.contact {
+    width: 100%;
+    margin: 0 auto;
+    margin-right:10;
+    padding: 20px 0;
+    opacity: 100%;
+    background-color:#002930;
+    border-radius:  5px;
+    color:var(--colorWhite);
+    text-align: center;
+}
+
+
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+
+footer {
+    background: #333;
+    color: var(--colorWhite);
+    text-align: center;
+    padding: 10px 50;
+    position:relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.section-background .container h2 {
+    text-align: center;
+}
+.section-background2 .container h2 {
+    text-align: center;
+}
+
+
+.section-background {
+    background-color: rgba(0, 0, 0, 0.6); /* Preto com 60% de opacidade */
+    color: var(--colorWhite); /* Texto branco para melhor contraste */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Espaçamento externo */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+.section-especiais {
+    background-color: var(--colorBlack);
+    color: var(--colorWhite); /* Texto branco para melhor contraste */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Espaçamento externo */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+}
+
+/* Estilo adicional para garantir que o texto esteja legível */
+.section-background h2,
+.section-background p,
+.section-background h3 {
+    color: var(--colorWhite); /* Garantir que todos os textos sejam brancos */
+}
+
+.section-especiais .container .animacao{
+    font-size: 30px;
+    display:flex;
+    background-color: var(--colorBlack);
+    overflow: hidden;
+
+}
+.section-especiais .container .animacao .texto-estatico{
+    font-size: 30px;
+    color: var(--colorWhite);
+    margin:  80px;
+    text-align: center;
+
+}
+.section-especiais .container .animacao .textos-dinamicos{
+    margin-left: 15px;
+}
+.section-especiais .container .animacao .textos-dinamicos li::after{
+
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorBlack);
+    border-left: 2px solid var(--colorPurple);
+    animation:typing 4s steps(15) infinite;
+}
+.section-especiais .container .animacao .textos-dinamicos li{
+    list-style: none;
+    font-size: 30px;
+    position: relative;
+    color:var(--colorPurple);
+    top: 0;
+    animation-name: slide 8s steps(4) infinite;
+}
+
+@keyframes slide{
+    100% {
+        top: -190px;
+    }
+}
+
+@keyframes typing{
+    40%, 60%{
+        left: 100%
+    }
+    100%{
+        left: 0;
+    }
+}
+
+
+/* Estilos para a seção do Carrossel */
+
+.carousel {
+    position: relative;
+    width: calc(100% - 40px); /* Largura do carrossel ocupando toda a largura da página menos 20px de cada lado */
+    max-width: 1000px; /* Ajuste o valor conforme necessário */
+    margin: 0 20px; /* Margem de 20px em ambos os lados */
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel h2{
+    text-align: center;
+}
+.carousel-images img {
+    width: 50%;
+    height: auto;
+    display: block;
+    flex-shrink: 0; /* Impede a imagem de encolher */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--colorWhite);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+    z-index: 1; /* Garante que os botões estão acima das imagens */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+.section-especiais .menu-footer ul li {
+    text-align: center;
+    padding: 10px 10;
+    list-style: none;
+    
+}
+.section-especiais .menu-footer ul li a {
+    text-decoration: none;
+    margin: 20px;
+    font-size: 20px;
+    color: var(--colorWhite);
+    
+}
+.section-especiais .menu-footer ul li a:hover {
+    text-decoration: none;
+    color: var(--colorPurple);
+}
+
+/* Estilo do menu de rodapé */
+
+.section-especiais .whatsA{
+    text-align: center;
+}
+
+
+
+
+/* Estilo dosícones de WhatsApp e Instagram */
+.section-especiais .whats {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.whats img {
+    transition: transform 0.5s ease;
+}
+
+.whats img:hover {
+    transform: scale(1.2); /* Aumenta o tamanho das imagens ao passar o mouse */
+}
