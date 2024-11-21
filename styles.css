@@ -22,10 +22,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+/* colocar os tamanho relativos */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
 }
 
 header {
@@ -128,7 +129,6 @@ body::before {
 }
 
 
-
 /* stylos CTA */
 
 .cta2 {
@@ -157,10 +157,11 @@ body::before {
 .section-especiais .container-especial{
     width: 80%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
     color: var(--colorWhite);
 
 }
+
 .section-especiais .container-especial h2{
     text-align: center;
     color: var(--colorWhite);
@@ -249,15 +250,35 @@ footer {
 .section-especiais .container .animacao .texto-estatico{
     font-size: 30px;
     color: var(--colorWhite);
-    margin:  80px;
     text-align: center;
+    padding: auto;
+    margin: auto;
 
 }
-.section-especiais .container .animacao .textos-dinamicos{
+
+/* Estilo para dispositivos maiores */
+.section-especiais .container .animacao .textos-dinamicos {
+    margin: auto;
     margin-left: 15px;
+    width: 100%;  /* Garante que ocupe toda a largura disponível */
+    max-width: 1200px; /* Limita o tamanho máximo em telas grandes */
+    height: auto;
+    display: flex;
+    justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
 }
-.section-especiais .container .animacao .textos-dinamicos li::after{
 
+.section-especiais .container .animacao .textos-dinamicos li {
+    list-style: none;
+    font-size: 30px;  /* Tamanho da fonte em dispositivos maiores */
+    position: relative;
+    color: var(--colorPurple);
+    top: 0;
+    animation-name: slide 8s steps(4) infinite;
+    white-space: nowrap; /* Evita quebra de linha */
+}
+
+.section-especiais .container .animacao .textos-dinamicos li::after {
     content: '';
     position: absolute;
     left: 0;
@@ -265,15 +286,47 @@ footer {
     height: 100%;
     background-color: var(--colorBlack);
     border-left: 2px solid var(--colorPurple);
-    animation:typing 4s steps(15) infinite;
+    animation: typing 4s steps(15) infinite;
 }
-.section-especiais .container .animacao .textos-dinamicos li{
-    list-style: none;
-    font-size: 30px;
-    position: relative;
-    color:var(--colorPurple);
-    top: 0;
-    animation-name: slide 8s steps(4) infinite;
+
+/* Ajustes para tablets (max-width 768px) */
+@media (max-width: 768px) {
+
+    .section-especiais .container .animacao .texto-estatico{
+        margin-right: 3px;
+        font-size: 15PX;
+        width: 90%; 
+
+    }
+    .section-especiais .container .animacao .textos-dinamicos {
+        margin-left: 25px;
+        width: 90%;  /* Aumenta a largura para ocupar a tela de forma adequada */
+    }
+
+    .section-especiais .container .animacao .textos-dinamicos li {
+        font-size: 10px; /* Ajusta o tamanho da fonte */
+    }
+
+    .section-especiais .container .animacao .textos-dinamicos li::after {
+        animation: typing 3s steps(12) infinite; /* Ajusta a animação */
+    }
+}
+
+/* Ajustes para dispositivos móveis (max-width 480px) */
+@media (max-width: 480px) {
+    .section-especiais .container .animacao .textos-dinamicos {
+        width: 95%;  /* Garante que o conteúdo ocupe quase toda a tela */
+        margin: 10px;
+    }
+
+    .section-especiais .container .animacao .textos-dinamicos li {
+        margin-left: 5px;
+        font-size: 8px; /* Tamanho da fonte para telas pequenas */
+    }
+
+    .section-especiais .container .animacao .textos-dinamicos li::after {
+        animation: typing 3s steps(10) infinite; /* Ajusta a animação */
+    }
 }
 
 @keyframes slide{
@@ -297,9 +350,10 @@ footer {
 .carousel {
     position: relative;
     width: calc(100% - 40px); /* Largura do carrossel ocupando toda a largura da página menos 20px de cada lado */
-    max-width: 1000px; /* Ajuste o valor conforme necessário */
+    max-width: 80%; /* Ajuste o valor conforme necessário */
     margin: 0 20px; /* Margem de 20px em ambos os lados */
     overflow: hidden;
+    margin-left: 10%;
 }
 
 .carousel-images {
@@ -371,17 +425,10 @@ button {
 /* Estilo dosícones de WhatsApp e Instagram */
 .section-especiais .whats {
     display: flex;
-    justify-content: right;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
-}
 
-.whats img {
-    transition: transform 0.5s ease;
-}
-
-.whats img:hover {
-    transform: scale(1.2); /* Aumenta o tamanho das imagens ao passar o mouse */
 }
 
 .whats img {
